@@ -25,13 +25,29 @@
       }
 
       .img-icon {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
+        left: 2.5%;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .img-list {
+        width: 40px;
+        height: 40px;
       }
 
       .font-size-form {
         font-size: 14px !important;
       }
+
+      .item-name {
+        padding: 0;
+      }
+
+      /* .size-holder {
+        font-size: 12px !important;
+      } */
     </style>
   </head>
   <body>
@@ -49,15 +65,25 @@
         <div class="mt-3"></div>
         <div id="projectInfoInput">
           <div class="row row-cols-2 text-center">
-            <div class="col my-1">
+            <div class="col my-1 position-relative">
+              <img
+                class="position-absolute img-icon"
+                src="https://i.ibb.co/L6MwPc5/image.png"
+                alt=""
+              />
               <input
                 id="area"
                 type="text"
-                class="form-control bg-body-secondary bg-gradient text-center"
-                placeholder=" พื้นที่ใช้สอยในบ้าน"
+                class="form-control bg-body-secondary bg-gradient text-center size-holder"
+                placeholder=" พื้นที่ใช้สอย"
               />
             </div>
-            <div class="col my-1">
+            <div class="col my-1 position-relative">
+              <img
+                class="position-absolute img-icon"
+                src="https://i.ibb.co/QPX5P6p/image.png"
+                alt=""
+              />
               <input
                 id="bedroom"
                 type="text"
@@ -65,7 +91,12 @@
                 placeholder="ห้องนอน"
               />
             </div>
-            <div class="col my-1">
+            <div class="col my-1 position-relative">
+              <img
+                class="position-absolute img-icon"
+                src="https://i.ibb.co/kBv1p50/image.png"
+                alt=""
+              />
               <input
                 id="bathroom"
                 type="text"
@@ -73,7 +104,12 @@
                 placeholder="ห้องน้ำ"
               />
             </div>
-            <div class="col my-1">
+            <div class="col my-1 position-relative">
+              <img
+                class="position-absolute img-icon"
+                src="https://i.ibb.co/k4PrbMd/image.png"
+                alt=""
+              />
               <input
                 id="parking"
                 type="text"
@@ -105,15 +141,21 @@
               >
                 <div class="accordion-body">
                   <div class="row row-cols-4 text-center">
-                    <div class="col-4">รายการ</div>
-                    <div class="col-2">มี</div>
-                    <div class="col-2">ไม่มี</div>
+                    <div class="col-6">รายการ</div>
+                    <div class="col-1">มี</div>
+                    <div class="col-1">ไม่มี</div>
                     <div class="col-4">สเปก</div>
                   </div>
                   <hr />
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ถังบำบัดน้ำเสีย</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/cFqxJNK/Artboard-5-copy-3-4x.png"
+                        alt=""
+                      />ถังบำบัดน้ำเสีย
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -122,7 +164,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -140,9 +182,13 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">บ่อพักดักกลิ่น</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img class="img-list"
+                      src="https://i.ibb.co/4JVyx4d/Artboard-5-copy-4x.png""
+                      alt="">บ่อพักดักกลิ่น
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -151,7 +197,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -169,9 +215,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ถังดักไขมัน</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/PZKqVzd/Artboard-5-4x.png"
+                        alt=""
+                      />ถังดักไขมัน
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -180,7 +232,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -198,9 +250,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ถังเก็บน้ำ/แทงค์น้ำ</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/VwP3KDK/Artboard-5-copy-2-4x.png"
+                        alt=""
+                      />แทงค์น้ำ
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -209,7 +267,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -227,9 +285,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ปั้มน้ำอัตโนมัติ</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/cFqxJNK/Artboard-5-copy-3-4x.png"
+                        alt=""
+                      />ปั้มน้ำอัตโนมัติ
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -238,7 +302,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -256,9 +320,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ระบบท่อปลวก</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/cFqxJNK/Artboard-5-copy-3-4x.png"
+                        alt=""
+                      />ระบบท่อปลวก
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -267,7 +337,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -307,15 +377,21 @@
               >
                 <div class="accordion-body">
                   <div class="row row-cols-4 text-center">
-                    <div class="col-4">รายการ</div>
-                    <div class="col-2">มี</div>
-                    <div class="col-2">ไม่มี</div>
+                    <div class="col-6">รายการ</div>
+                    <div class="col-1">มี</div>
+                    <div class="col-1">ไม่มี</div>
                     <div class="col-4">สเปก</div>
                   </div>
                   <hr />
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ประเภทหลังคา</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/GdJJdRV/Artboard-9-copy-3-4x.png"
+                        alt=""
+                      />ประเภทหลังคา
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -324,7 +400,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -342,9 +418,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">โครงสร้างหลังคา</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/f4SM2F2/Artboard-9-4x.png"
+                        alt=""
+                      />โครงสร้างหลังคา
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -353,7 +435,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -371,9 +453,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">หลังคาโซลาร์เซลล์</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/f4SM2F2/Artboard-9-4x.png"
+                        alt=""
+                      />หลังคาโซลาร์เซลล์
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -382,7 +470,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -400,9 +488,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ฉนวนกันความร้อน</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/YBtPSDR/Artboard-9-copy-4x.png"
+                        alt=""
+                      />ฉนวนกันความร้อน
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -411,7 +505,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -429,11 +523,16 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/Wvrwm6J/Artboard-9-copy-10-4x.png"
+                        alt=""
+                      />
                       ระบบระบายความร้อนใต้หลังคา
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -442,36 +541,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
-                      <input
-                        type="checkbox"
-                        class="no-checkbox"
-                        name=""
-                        id=""
-                        onclick="toggleInput(this)"
-                      />
-                    </div>
-                    <div class="col-4">
-                      <input
-                        type="text"
-                        style="width: 100%"
-                        class="border-text-input bg-body-secondary bg-gradient"
-                        disabled
-                      />
-                    </div>
-                  </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ระบบท่อปลวก</div>
-                    <div class="col-2">
-                      <input
-                        type="checkbox"
-                        class="has-checkbox"
-                        name=""
-                        id=""
-                        onclick="toggleInput(this)"
-                      />
-                    </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -517,9 +587,15 @@
                     <div class="col-4">สเปก</div>
                   </div>
                   <hr />
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ขนาดมิเตอร์ไฟ</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/BncjX9F/Artboard-9-copy-4-4x.png"
+                        alt=""
+                      />ขนาดมิเตอร์ไฟ
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -528,7 +604,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -546,9 +622,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">เบรกกเกอร์ไฟ</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/ZdPk79s/Artboard-9-copy-8-4x.png"
+                        alt=""
+                      />เบรกกเกอร์ไฟ
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -557,7 +639,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -575,9 +657,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">ระบบป้องกันไฟดูด</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/ZdPk79s/Artboard-9-copy-8-4x.png"
+                        alt=""
+                      />ระบบป้องกันไฟดูด
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -586,7 +674,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -604,9 +692,15 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">บล็อกไฟสำหรับ EV Charger</div>
-                    <div class="col-2">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/17rPSsh/Artboard-9-copy-6-4x.png"
+                        alt=""
+                      />บล็อกไฟสำหรับ EV Charger
+                    </div>
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -615,7 +709,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
@@ -633,11 +727,16 @@
                       />
                     </div>
                   </div>
-                  <div class="row row-cols-4 text-center mb-1 row-input">
-                    <div class="col-4 item-name">
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <img
+                        class="img-list"
+                        src="https://i.ibb.co/xf4dZBg/Artboard-9-copy-9-4x.png"
+                        alt=""
+                      />
                       บล็อกไฟสำหรับสอเตอร์ประตูรั้วอัตโนมัติ
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="has-checkbox"
@@ -646,7 +745,7 @@
                         onclick="toggleInput(this)"
                       />
                     </div>
-                    <div class="col-2">
+                    <div class="col-1">
                       <input
                         type="checkbox"
                         class="no-checkbox"
