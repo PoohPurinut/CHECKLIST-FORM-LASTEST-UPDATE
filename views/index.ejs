@@ -77,55 +77,87 @@
         <div class="mt-3"></div>
         <div id="projectInfoInput">
           <div class="row row-cols-2 text-center">
-            <div class="col my-1 position-relative">
+            <div class="col my-1 position-relative row-input">
               <img
                 class="position-absolute img-icon"
                 src="https://i.ibb.co/L6MwPc5/image.png"
                 alt=""
               />
+              <div class="d-none item-name">พื้นที่ใช้สอย</div>
+              <input
+                type="checkbox"
+                class="has-checkbox d-none"
+                name=""
+                id=""
+                checked
+              />
               <input
                 id="area"
                 type="text"
-                class="form-control bg-body-secondary bg-gradient text-center"
+                class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
                 placeholder=" พื้นที่ใช้สอย"
               />
             </div>
-            <div class="col my-1 position-relative">
+            <div class="col my-1 position-relative row-input">
               <img
                 class="position-absolute img-icon"
                 src="https://i.ibb.co/QPX5P6p/image.png"
                 alt=""
               />
+              <div class="d-none item-name">ห้องนอน</div>
+              <input
+                type="checkbox"
+                class="has-checkbox d-none"
+                name=""
+                id=""
+                checked
+              />
               <input
                 id="bedroom"
                 type="text"
-                class="form-control bg-body-secondary bg-gradient text-center"
+                class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
                 placeholder="ห้องนอน"
               />
             </div>
-            <div class="col my-1 position-relative">
+            <div class="col my-1 position-relative row-input">
               <img
                 class="position-absolute img-icon"
                 src="https://i.ibb.co/kBv1p50/image.png"
                 alt=""
               />
+              <div class="d-none item-name">ห้องน้ำ</div>
+              <input
+                type="checkbox"
+                class="has-checkbox d-none"
+                name=""
+                id=""
+                checked
+              />
               <input
                 id="bathroom"
                 type="text"
-                class="form-control bg-body-secondary bg-gradient text-center"
+                class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
                 placeholder="ห้องน้ำ"
               />
             </div>
-            <div class="col my-1 position-relative">
+            <div class="col my-1 position-relative row-input">
               <img
                 class="position-absolute img-icon"
                 src="https://i.ibb.co/k4PrbMd/image.png"
                 alt=""
               />
+              <div class="d-none item-name">ที่จอดรถ</div>
+              <input
+                type="checkbox"
+                class="has-checkbox d-none"
+                name=""
+                id=""
+                checked
+              />
               <input
                 id="parking"
                 type="text"
-                class="form-control bg-body-secondary bg-gradient text-center"
+                class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
                 placeholder="ที่จอดรถ"
               />
             </div>
@@ -860,7 +892,14 @@
         let projects = JSON.parse(localStorage.getItem("projects")) || [];
         projects = projects.filter((project) => project.id !== projectId);
         localStorage.setItem("projects", JSON.stringify(projects));
-        document.getElementById(projectId).remove();
+        // document.getElementById(projectId).remove();
+        const deleteTargets = document.querySelectorAll(`.${projectId}`);
+        deleteTargets.forEach((target) => {
+          if (target) {
+            target.remove();
+          }
+        });
+        window.location.reload();
       }
 
       document
@@ -869,10 +908,7 @@
           event.preventDefault();
 
           const projectName = document.getElementById("projectName").value;
-          const rows = document.querySelectorAll(
-            "#specForm .accordion-body .row-input"
-          );
-          console.log(rows);
+          const rows = document.querySelectorAll("#specForm .row-input");
           const projectId = `project-${new Date().getTime()}`;
 
           let projectData = {
@@ -901,6 +937,9 @@
           document.getElementById("specForm").reset();
           document.querySelectorAll(".border-text-input").forEach((element) => {
             element.disabled = true;
+          });
+          document.querySelectorAll(".disabled-false").forEach((element) => {
+            element.disabled = false;
           });
         });
 
@@ -979,7 +1018,7 @@
           </td>
         `;
             } else {
-              comparisonTable += `<td>ไม่มีข้อมูล</td>`;
+              comparisonTable += `<td>ไม่มี</td>`;
             }
           });
           comparisonTable += `</tr>`;
@@ -1014,12 +1053,14 @@
           </div>
           <div id="collapse${projectData.id}" class="collapse" aria-labelledby="heading${projectData.id}" data-parent="#datas">
             <div class="card-body">
+                <!--
               <div class="row row-cols-2 text-center">
                 <div class="col my-1">พื้นที่ใช้สอย: ${areaValue} ตร.ม</div>
                 <div class="col my-1">ห้องนอน: ${bedroomValue} ห้อง</div>                
                 <div class="col my-1">ห้องน้ำ: ${bathroomValue} ห้อง</div>
                 <div class="col my-1">ที่จอดรถ: ${parkingValue} ที่</div>
               </div>
+              -->
               <table class="table">
                 <thead>
                   <tr>
@@ -1054,7 +1095,7 @@
         document.getElementById("datas").innerHTML += data;
 
         const comparisonData = `
-          <div class="form-check d-flex justify-content-evenly">
+          <div class="form-check d-flex justify-content-evenly" id="${projectData.id}">
             <input class="form-check-input" type="checkbox" value="${projectData.id}">
             <label class="form-check-label" for="compare-${projectData.id}">
               ${projectData.name}
