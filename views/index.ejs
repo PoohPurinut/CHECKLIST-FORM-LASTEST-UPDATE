@@ -19,6 +19,16 @@
         font-style: normal;
       }
 
+      .has-checkbox {
+        width: 25px;
+        height: 25px;
+      }
+
+      .no-checkbox {
+        width: 25px;
+        height: 25px;
+      }
+
       .border-text-input {
         border: 0px;
         border-radius: 5px;
@@ -1092,8 +1102,8 @@
         document.getElementById("datas").innerHTML += data;
 
         const comparisonData = `
-          <div class="form-check d-flex justify-content-evenly" id="${projectData.id}">
-            <input class="form-check-input" type="checkbox" value="${projectData.id}">
+          <div class="form-check text-center position-relative" id="${projectData.id}">
+            <input style="left: 25%;" class="form-check-input position-absolute" type="checkbox" value="${projectData.id}" id="compare-${projectData.id}">
             <label class="form-check-label" for="compare-${projectData.id}">
               ${projectData.name}
             </label>
