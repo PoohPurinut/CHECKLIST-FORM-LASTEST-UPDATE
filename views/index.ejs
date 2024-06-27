@@ -57,6 +57,11 @@
         transform: translate(50%, -50%);
       }
 
+      .img-icon-add {
+        width: 30px !important;
+        height: 30px !important;
+      }
+
       .img-list {
         width: 40px;
         height: 40px;
@@ -109,7 +114,14 @@
                 src="https://i.ibb.co/L6MwPc5/image.png"
                 alt=""
               />
-              <div class="d-none item-name">พื้นที่ใช้สอย</div>
+              <div class="d-none item-name">
+                <img
+                  class="img-icon-add"
+                  src="https://i.ibb.co/L6MwPc5/image.png"
+                  alt=""
+                />
+                พื้นที่ใช้สอย
+              </div>
               <input
                 type="checkbox"
                 class="has-checkbox d-none"
@@ -130,7 +142,14 @@
                 src="https://i.ibb.co/QPX5P6p/image.png"
                 alt=""
               />
-              <div class="d-none item-name">ห้องนอน</div>
+              <div class="d-none item-name">
+                <img
+                  class="img-icon-add"
+                  src="https://i.ibb.co/QPX5P6p/image.png"
+                  alt=""
+                />
+                ห้องนอน
+              </div>
               <input
                 type="checkbox"
                 class="has-checkbox d-none"
@@ -151,7 +170,14 @@
                 src="https://i.ibb.co/kBv1p50/image.png"
                 alt=""
               />
-              <div class="d-none item-name">ห้องน้ำ</div>
+              <div class="d-none item-name">
+                <img
+                  class="img-icon-add"
+                  src="https://i.ibb.co/kBv1p50/image.png"
+                  alt=""
+                />
+                ห้องน้ำ
+              </div>
               <input
                 type="checkbox"
                 class="has-checkbox d-none"
@@ -172,7 +198,14 @@
                 src="https://i.ibb.co/k4PrbMd/image.png"
                 alt=""
               />
-              <div class="d-none item-name">ที่จอดรถ</div>
+              <div class="d-none item-name">
+                <img
+                  class="img-icon-add"
+                  src="https://i.ibb.co/k4PrbMd/image.png"
+                  alt=""
+                />
+                ที่จอดรถ
+              </div>
               <input
                 type="checkbox"
                 class="has-checkbox d-none"
@@ -698,7 +731,7 @@
                         class="img-list"
                         src="https://i.ibb.co/ZdPk79s/Artboard-9-copy-8-4x.png"
                         alt=""
-                      />เบรกกเกอร์ไฟ
+                      />เบรกเกอร์ไฟ
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -804,7 +837,7 @@
                         src="https://i.ibb.co/xf4dZBg/Artboard-9-copy-9-4x.png"
                         alt=""
                       />
-                      บล็อกไฟสำหรับสอเตอร์ประตูรั้วอัตโนมัติ
+                      บล็อกไฟสำหรับมอเตอร์ประตูรั้วอัตโนมัติ
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1021,7 +1054,7 @@
 
           rows.forEach((row) => {
             // const item = row.cells[0].innerText;
-            const item = row.querySelector(".item-name").innerText;
+            const item = row.querySelector(".item-name").innerHTML;
             const hasItem = row.querySelector(".has-checkbox").checked
               ? "มี"
               : "ไม่มี";

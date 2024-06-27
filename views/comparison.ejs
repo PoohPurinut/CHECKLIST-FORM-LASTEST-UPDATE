@@ -35,6 +35,24 @@
         font-size: 15px !important;
         border-radius: 10px;
       }
+
+      .img-icon {
+        width: 30px;
+        height: 30px;
+        left: 2.5%;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .img-icon-add {
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+      .img-list {
+        width: 60px;
+        height: 60px;
+      }
     </style>
   </head>
   <body>
@@ -158,7 +176,7 @@
 
           let rowIndex = 0;
           allItems.forEach((item) => {
-            comparisonTable += `<tr><td>${item}</td>`;
+            comparisonTable += `<tr><td class="text-start">${item}</td>`;
             projects.forEach((project) => {
               const projectItem = project.items.find((i) => i.item === item);
               if (projectItem) {
