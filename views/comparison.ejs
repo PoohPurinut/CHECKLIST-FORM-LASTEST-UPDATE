@@ -24,6 +24,12 @@
         font-style: normal;
       }
 
+      /* body {
+        background: linear-gradient(to bottom, #ffffff, #4fc4f0);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      } */
+
       .scroll-up {
         position: fixed;
         right: 0.5%;
@@ -52,6 +58,28 @@
       .img-list {
         width: 70px;
         height: 70px;
+      }
+
+      /* bg-list-header */
+      .bg-d27d56 {
+        background-color: #d27d56 !important;
+      }
+      /* roof */
+      .bg-white {
+        background-color: darkgray !important;
+      }
+
+      /* sanitary */
+      .bg-blue {
+        background-color: skyblue !important;
+      }
+
+      .bg-purple {
+        background-color: palevioletred !important;
+      }
+
+      .bg-yellow {
+        background-color: khaki !important;
       }
     </style>
   </head>
@@ -155,6 +183,92 @@
 
         function displayComparison(projects) {
           let comparisonTable = `
+            <table class="table table-bordered" id="comparisonTable">
+              <thead>
+                <tr>
+                  <th class="text-center bg-d27d56">รายการ</th>
+                  ${projects
+                    .map(
+                      (project) =>
+                        `<th class="text-center">${project.name}</th>`
+                    )
+                    .join("")}
+                </tr>
+              </thead>
+              <tbody>
+          `;
+
+          const allItems = new Set();
+          projects.forEach((project) => {
+            project.items.forEach((item) => {
+              allItems.add(item.item);
+            });
+          });
+
+          let rowIndex = 0;
+          allItems.forEach((item) => {
+            let rowClass = "";
+            if (rowIndex >= 0 && rowIndex < 4) {
+              rowClass = "bg-white";
+            } else if (rowIndex >= 4 && rowIndex < 10) {
+              rowClass = "bg-blue";
+            } else if (rowIndex >= 10 && rowIndex < 15) {
+              rowClass = "bg-purple";
+            } else if (rowIndex >= 15 && rowIndex < 21) {
+              rowClass = "bg-yellow";
+            }
+
+            comparisonTable += `<tr class="${rowClass}"><td class="text-start ${rowClass}">${item}</td>`;
+            projects.forEach((project) => {
+              const projectItem = project.items.find((i) => i.item === item);
+              if (projectItem) {
+                const hasItemIcon =
+                  projectItem.hasItem === "มี"
+                    ? '<i class="fa-solid fa-circle-check text-success custom-icon-size"></i>'
+                    : '<i class="fa-solid fa-circle-xmark text-danger custom-icon-size"></i>';
+                comparisonTable += `
+                  <td class="text-center">
+                    ${rowIndex < 4 ? "" : hasItemIcon} <br>
+                    ${projectItem.spec}
+                  </td>
+                `;
+              } else {
+                comparisonTable += `
+                  <td class="text-center">
+                    ${
+                      rowIndex < 4
+                        ? ""
+                        : '<i class="fa-solid fa-circle-xmark text-danger custom-icon-size"></i>'
+                    }
+                  </td>
+                `;
+              }
+            });
+            comparisonTable += `</tr>`;
+            rowIndex++;
+          });
+
+          comparisonTable += `
+              </tbody>
+            </table>
+          `;
+
+          document.getElementById("comparison").innerHTML = comparisonTable;
+        }
+      });
+    </script>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const projects =
+          JSON.parse(localStorage.getItem("selectedProjects")) || [];
+        if (projects.length > 0) {
+          displayComparison(projects);
+        } else {
+          alert("ไม่มีโปรเจ็กต์ให้เปรียบเทียบ");
+        }
+
+        function displayComparison(projects) {
+          let comparisonTable = `
                 <table class="table table-bordered" id="comparisonTable">
                   <thead>
                     <tr>
@@ -207,72 +321,6 @@
             });
             comparisonTable += `</tr>`;
             rowIndex++;
-          });
-
-          comparisonTable += `
-                  </tbody>
-                </table>
-              `;
-
-          document.getElementById("comparison").innerHTML = comparisonTable;
-        }
-      });
-    </script>
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const projects =
-          JSON.parse(localStorage.getItem("selectedProjects")) || [];
-        if (projects.length > 0) {
-          displayComparison(projects);
-        } else {
-          alert("ไม่มีโปรเจ็กต์ให้เปรียบเทียบ");
-        }
-
-        function displayComparison(projects) {
-          let comparisonTable = `
-                <table class="table table-bordered" id="comparisonTable">
-                  <thead>
-                    <tr>
-                      <th>รายการ</th>
-                      ${projects
-                        .map((project) => `<th>${project.name}</th>`)
-                        .join("")}
-                    </tr>
-                  </thead>
-                  <tbody>
-                `;
-
-          const allItems = new Set();
-          projects.forEach((project) => {
-            project.items.forEach((item) => {
-              allItems.add(item.item);
-            });
-          });
-
-          allItems.forEach((item) => {
-            comparisonTable += `<tr><td>${item}</td>`;
-            projects.forEach((project) => {
-              const projectItem = project.items.find((i) => i.item === item);
-              if (projectItem) {
-                const hasItemIcon =
-                  projectItem.hasItem === "มี"
-                    ? '<i class="fa-solid fa-circle-check text-success custom-icon-size"></i>'
-                    : '<i class="fa-solid fa-circle-xmark text-danger custom-icon-size"></i>';
-                comparisonTable += `
-                      <td class="text-center">  
-                        ${hasItemIcon} <br>
-                        ${projectItem.spec}
-                      </td>
-                    `;
-              } else {
-                comparisonTable += `
-                      <td class="text-center">
-                        <i class="fa-solid fa-circle-xmark text-danger custom-icon-size"></i>
-                      </td>
-                    `;
-              }
-            });
-            comparisonTable += `</tr>`;
           });
 
           comparisonTable += `
