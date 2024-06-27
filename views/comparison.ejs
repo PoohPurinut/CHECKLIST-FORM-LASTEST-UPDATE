@@ -176,7 +176,7 @@
 
           let rowIndex = 0;
           allItems.forEach((item) => {
-            comparisonTable += `<tr><td class="text-center">${item}</td>`;
+            comparisonTable += `<tr><td class="text-start">${item}</td>`;
             projects.forEach((project) => {
               const projectItem = project.items.find((i) => i.item === item);
               if (projectItem) {
