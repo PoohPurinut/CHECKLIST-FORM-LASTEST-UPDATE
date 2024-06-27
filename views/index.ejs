@@ -1032,6 +1032,28 @@
           document.getElementById("comparisonTable").remove();
         });
 
+      // function compareProjects() {
+      //   const selectedProjects = [];
+      //   document
+      //     .querySelectorAll(
+      //       "#displayComparisonCheckbox .form-check-input:checked"
+      //     )
+      //     .forEach((checkbox) => {
+      //       const projectId = checkbox.value;
+      //       const projects = JSON.parse(localStorage.getItem("projects")) || [];
+      //       const project = projects.find((p) => p.id === projectId);
+      //       if (project) {
+      //         selectedProjects.push(project);
+      //       }
+      //     });
+
+      //   if (selectedProjects.length > 0) {
+      //     displayComparison(selectedProjects);
+      //   } else {
+      //     alert("กรุณาเลือกโปรเจ็กต์เพื่อเปรียบเทียบ");
+      //   }
+      // }
+
       function compareProjects() {
         const selectedProjects = [];
         document
@@ -1048,7 +1070,11 @@
           });
 
         if (selectedProjects.length > 0) {
-          displayComparison(selectedProjects);
+          localStorage.setItem(
+            "selectedProjects",
+            JSON.stringify(selectedProjects)
+          );
+          window.location.href = "/comparison";
         } else {
           alert("กรุณาเลือกโปรเจ็กต์เพื่อเปรียบเทียบ");
         }
