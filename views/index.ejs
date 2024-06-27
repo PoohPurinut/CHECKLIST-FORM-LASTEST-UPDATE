@@ -28,6 +28,16 @@
         font-style: normal;
       }
 
+      body {
+        background-color: #3167b1;
+        /* background-color: #6495ed; */
+      }
+
+      .body-bg-color {
+        background-color: #3167b1;
+        /* background-color: #6495ed; */
+      }
+
       .has-checkbox {
         width: 25px;
         height: 25px;
@@ -67,6 +77,12 @@
         height: 60px;
       }
 
+      .img-list-break {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
       .font-size-form {
         font-size: 14px !important;
       }
@@ -91,7 +107,7 @@
     <div id="navbar" class="container-fluid">
       <h1 class="text-center">
         <!-- <span class="center-checkbox-spec"> </span> -->
-        <span class="fs-4">
+        <span class="fs-4 text-light fw-bold">
           เริ่มสร้างฟอร์ม Checklist ก่อนซื้อบ้านของคุณ
           เพื่อเปรียบเทียบข้อมูลกันเลย!</span
         >
@@ -99,7 +115,11 @@
     </div>
     <div class="mt-5"></div>
     <div id="form" class="container">
-      <form id="specForm" class="border p-3" style="border-radius: 20px">
+      <form
+        id="specForm"
+        class="border p-3 bg-light"
+        style="border-radius: 20px"
+      >
         <div id="projectNameInput">
           <label for="projectName">ชื่อโครงการ: </label>
           <input id="projectName" class="form-control" type="text" />
@@ -573,8 +593,8 @@
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
                       <img
-                        class="img-list"
-                        src="https://i.ibb.co/f4SM2F2/Artboard-9-4x.png"
+                        class="img-list-break"
+                        src="https://i.ibb.co/0CMwsBr/Asset-3.png"
                         alt=""
                       />หลังคาโซลาร์เซลล์
                     </div>
@@ -742,8 +762,8 @@
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
                       <img
-                        class="img-list"
-                        src="https://i.ibb.co/ZdPk79s/Artboard-9-copy-8-4x.png"
+                        class="img-list-break"
+                        src="https://i.ibb.co/CQgSBYQ/Asset-1.png"
                         alt=""
                       />เบรกเกอร์ไฟ
                     </div>
@@ -847,8 +867,8 @@
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
                       <img
-                        class="img-list"
-                        src="https://i.ibb.co/xf4dZBg/Artboard-9-copy-9-4x.png"
+                        class="img-list-break"
+                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
                         alt=""
                       />
                       บล็อกไฟสำหรับมอเตอร์ประตูรั้วอัตโนมัติ
@@ -888,14 +908,14 @@
         <div class="mt-3"></div>
         <div class="text-center">
           <button type="submit" class="btn btn-primary bg-gradient">
-            บันทึก
+            Submit
           </button>
         </div>
       </form>
       <div class="mt-3"></div>
       <div id="listProjects">
         <div
-          class="bg-success bg-gradient text-light text-center px-3 py-2"
+          class="bg-info bg-gradient text-light text-center px-3 py-2"
           style="width: 100px; border-radius: 10px"
         >
           โครงการ
@@ -933,11 +953,11 @@
         <div id="comparison"></div>
       </div> -->
       <div class="accordion" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item" style="border: 0">
-          <h2 class="accordion-header">
+        <div class="accordion-item body-bg-color" style="border: 0">
+          <h2 class="accordion-header body-bg-color">
             <button
               style="border-radius: 30px; width: 300px"
-              class="accordion-button bg-success bg-gradient text-light"
+              class="accordion-button bg-info bg-gradient text-light"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseFour"
@@ -952,7 +972,7 @@
             class="accordion-collapse collapse"
           >
             <div class="accordion-body p-1 mt-2">
-              <div class="border p-3" style="border-radius: 20px">
+              <div class="border p-3 bg-light" style="border-radius: 20px">
                 <div
                   id="displayComparisonCheckbox"
                   class="row row-cols-2"
