@@ -160,7 +160,10 @@
                     <tr>
                       <th class="text-center">รายการ</th>
                       ${projects
-                        .map((project) => `<th>${project.name}</th>`)
+                        .map(
+                          (project) =>
+                            `<th class="text-center">${project.name}</th>`
+                        )
                         .join("")}
                     </tr>
                   </thead>
