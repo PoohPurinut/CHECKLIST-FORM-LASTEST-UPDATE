@@ -83,8 +83,26 @@
         padding: 10px;
       }
 
+      .img-list-bedroom {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
+      .img-list-bathroom {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
+      .img-list-garage {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
       .font-size-form {
-        font-size: 14px !important;
+        font-size: 10px !important;
       }
 
       .item-name {
@@ -109,6 +127,7 @@
 
       .flex-2 {
         flex: 2;
+        margin-top: 10px;
       }
     </style>
   </head>
@@ -138,7 +157,7 @@
           <input id="projectName" class="form-control" type="text" />
         </div>
         <div class="mt-3"></div>
-        <div id="projectInfoInput">
+        <!-- <div id="projectInfoInput">
           <div class="row row-cols-2 text-center">
             <div class="col my-1 position-relative row-input">
               <img
@@ -280,14 +299,260 @@
               />
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="mt-3"></div>
         <div id="systemInput" class="font-size-form">
           <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button"
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFive"
+                >
+                  ข้อมูลแบบบ้าน Project Information
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseFive"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="row row-cols-4 text-center">
+                    <div class="col-6">รายการ</div>
+                    <div class="col-1 has-no-padding">มี</div>
+                    <div class="col-1 has-no-padding">ไม่มี</div>
+                    <div class="col-4">สเปก</div>
+                  </div>
+                  <hr />
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/L6MwPc5/image.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          พื้นที่ใช้สอย <br />
+                          Living Area
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-bedroom"
+                            src="https://i.ibb.co/QPX5P6p/image.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ห้องนอน <br />
+                          Bedroom
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1"></div>
+                        <div class="flex-2"></div>
+                      </div>
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-bathroom"
+                            src="https://i.ibb.co/kBv1p50/image.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ห้องน้ำ<br />
+                          BathRoom
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1"></div>
+                        <div class="flex-2"></div>
+                      </div>
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-garage"
+                            src="https://i.ibb.co/k4PrbMd/image.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ที่จอดรถ<br />
+                          Garage
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ห้องแม่บ้าน <br />
+                          Maid Room
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseOne"
@@ -347,7 +612,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -388,7 +652,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -431,7 +694,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -516,7 +778,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -559,7 +820,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -591,76 +851,6 @@
                     <div class="col-4">สเปก</div>
                   </div>
                   <hr />
-                  <!-- <div class="row row-cols-4 mb-1 row-input">
-                    <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/GdJJdRV/Artboard-9-copy-3-4x.png"
-                        alt=""
-                      />ประเภทหลังคา
-                    </div>
-                    <div class="col-1 center-checkbox-spec">
-                      <input
-                        type="checkbox"
-                        class="has-checkbox"
-                        name=""
-                        id=""
-                        onclick="toggleInput(this)"
-                      />
-                    </div>
-                    <div class="col-1 center-checkbox-spec">
-                      <input
-                        type="checkbox"
-                        class="no-checkbox"
-                        name=""
-                        id=""
-                        onclick="toggleInput(this)"
-                      />
-                    </div>
-                    <div class="col-4 center-checkbox-spec">
-                      <input
-                        type="text"
-                        style="width: 100%"
-                        class="border-text-input bg-body-secondary bg-gradient"
-                        disabled
-                      />
-                    </div>
-                  </div>
-                  <div class="row row-cols-4 mb-1 row-input">
-                    <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/f4SM2F2/Artboard-9-4x.png"
-                        alt=""
-                      />โครงสร้างหลังคา
-                    </div>
-                    <div class="col-1 center-checkbox-spec">
-                      <input
-                        type="checkbox"
-                        class="has-checkbox"
-                        name=""
-                        id=""
-                        onclick="toggleInput(this)"
-                      />
-                    </div>
-                    <div class="col-1 center-checkbox-spec">
-                      <input
-                        type="checkbox"
-                        class="no-checkbox"
-                        name=""
-                        id=""
-                        onclick="toggleInput(this)"
-                      />
-                    </div>
-                    <div class="col-4 center-checkbox-spec">
-                      <input
-                        type="text"
-                        style="width: 100%"
-                        class="border-text-input bg-body-secondary bg-gradient"
-                        disabled
-                      />
-                    </div>
-                  </div> -->
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
                       <div class="display-flex">
@@ -699,7 +889,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -742,7 +931,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -789,7 +977,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -860,7 +1047,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -903,7 +1089,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -946,7 +1131,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -989,7 +1173,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1032,7 +1215,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1075,7 +1257,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1118,7 +1299,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1161,7 +1341,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1204,7 +1383,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1247,7 +1425,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1290,7 +1467,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1333,7 +1509,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1376,7 +1551,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1419,7 +1593,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1428,8 +1601,8 @@
                       <div class="display-flex">
                         <div class="flex-1">
                           <img
-                            class="img-list-break"
-                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            class="img-list"
+                            src="https://i.ibb.co/w01h5x5/plug.png"
                             alt=""
                           />
                         </div>
@@ -1471,13 +1644,13 @@
                         <div class="flex-1">
                           <img
                             class="img-list-break"
-                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            src="https://i.ibb.co/3TRzW5J/garage-door.png"
                             alt=""
                           />
                         </div>
                         <div class="flex-2">
-                          ห้องแม่บ้าน <br />
-                          Maid Room
+                          ประตูโรงรถ <br />
+                          Garage Door
                         </div>
                       </div>
                     </div>
@@ -1504,7 +1677,6 @@
                         type="text"
                         style="width: 100%"
                         class="border-text-input bg-body-secondary bg-gradient"
-                        
                       />
                     </div>
                   </div>
@@ -1585,7 +1757,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
+    <!-- <script>
       document.getElementById("area").addEventListener("blur", function () {
         let value = this.value.trim();
         if (value && !value.endsWith("ตร.ม")) {
@@ -1610,7 +1782,7 @@
           this.value = `${value.replace(/ คัน$/, "")} คัน`;
         }
       });
-    </script>
+    </script> -->
     <script>
       function toggleInput(checkbox) {
         const row = checkbox.closest(".row");
@@ -1702,12 +1874,6 @@
         .getElementById("compareBtn")
         .addEventListener("click", compareProjects);
 
-      // document
-      //   .getElementById("deleteTable")
-      //   .addEventListener("click", function () {
-      //     document.getElementById("comparisonTable").remove();
-      //   });
-
       function compareProjects() {
         const selectedProjects = [];
         document
@@ -1781,10 +1947,10 @@
       }
 
       function addProjectToDOM(projectData) {
-        const bedroomValue = document.getElementById("bedroom").value;
-        const bathroomValue = document.getElementById("bathroom").value;
-        const areaValue = document.getElementById("area").value;
-        const parkingValue = document.getElementById("parking").value;
+        // const bedroomValue = document.getElementById("bedroom").value;
+        // const bathroomValue = document.getElementById("bathroom").value;
+        // const areaValue = document.getElementById("area").value;
+        // const parkingValue = document.getElementById("parking").value;
         let data = `
         <div class="card mt-3" id="${projectData.id}">
           <div class="card-header d-flex justify-content-between align-items-center" id="heading${projectData.id}">
@@ -1797,14 +1963,6 @@
           </div>
           <div id="collapse${projectData.id}" class="collapse" aria-labelledby="heading${projectData.id}" data-parent="#datas">
             <div class="card-body">
-                <!--
-              <div class="row row-cols-2 text-center">
-                <div class="col my-1">พื้นที่ใช้สอย: ${areaValue} ตร.ม</div>
-                <div class="col my-1">ห้องนอน: ${bedroomValue} ห้อง</div>                
-                <div class="col my-1">ห้องน้ำ: ${bathroomValue} ห้อง</div>
-                <div class="col my-1">ที่จอดรถ: ${parkingValue} ที่</div>
-              </div>
-              -->
               <table class="table">
                 <thead>
                   <tr>
@@ -1823,7 +1981,7 @@
             <td>${itemData.item}</td>
             <td>${itemData.hasItem === "มี" ? "✔" : ""}</td>
             <td>${itemData.hasItem === "ไม่มี" ? "✔" : ""}</td>
-            <td>${itemData.spec}</td>
+            <td style="word-break: break-all;">${itemData.spec}</td>
           </tr>
         `;
         });
