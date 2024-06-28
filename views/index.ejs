@@ -97,6 +97,19 @@
         justify-content: space-evenly;
         padding: 3px;
       }
+
+      .display-flex {
+        display: flex;
+      }
+
+      .flex-1 {
+        flex: 1;
+        max-width: 40%;
+      }
+
+      .flex-2 {
+        flex: 2;
+      }
     </style>
   </head>
   <body>
@@ -131,15 +144,18 @@
                 alt=""
               />
               <div class="d-none item-name">
-                <span class="ms-3"> </span>
-                <img
-                  class="img-icon-add"
-                  src="https://i.ibb.co/L6MwPc5/image.png"
-                  alt=""
-                />
-                <span class="ms-3"> </span>
-
-                พื้นที่ใช้สอย Living Area
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <span class="ms-3"> </span>
+                    <img
+                      class="img-icon-add"
+                      src="https://i.ibb.co/L6MwPc5/image.png"
+                      alt=""
+                    />
+                    <span class="ms-3"> </span>
+                  </div>
+                  <div class="flex-2">พื้นที่ใช้สอย Living Area</div>
+                </div>
               </div>
               <input
                 type="checkbox"
@@ -162,16 +178,19 @@
                 alt=""
               />
               <div class="d-none item-name">
-                <span class="ms-3"> </span>
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <span class="ms-3"> </span>
 
-                <img
-                  class="img-icon-add"
-                  src="https://i.ibb.co/QPX5P6p/image.png"
-                  alt=""
-                />
-                <span class="ms-3"> </span>
-
-                ห้องนอน Bedroom
+                    <img
+                      class="img-icon-add"
+                      src="https://i.ibb.co/QPX5P6p/image.png"
+                      alt=""
+                    />
+                    <span class="ms-3"> </span>
+                  </div>
+                  <div class="flex-2">ห้องนอน Bedroom</div>
+                </div>
               </div>
               <input
                 type="checkbox"
@@ -194,16 +213,19 @@
                 alt=""
               />
               <div class="d-none item-name">
-                <span class="ms-3"> </span>
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <span class="ms-3"> </span>
 
-                <img
-                  class="img-icon-add"
-                  src="https://i.ibb.co/kBv1p50/image.png"
-                  alt=""
-                />
-                <span class="ms-3"> </span>
-
-                ห้องน้ำ Bathroom
+                    <img
+                      class="img-icon-add"
+                      src="https://i.ibb.co/kBv1p50/image.png"
+                      alt=""
+                    />
+                    <span class="ms-3"> </span>
+                  </div>
+                  <div class="flex-2">ห้องน้ำ Bathroom</div>
+                </div>
               </div>
               <input
                 type="checkbox"
@@ -226,16 +248,19 @@
                 alt=""
               />
               <div class="d-none item-name">
-                <span class="ms-3"> </span>
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <span class="ms-3"> </span>
 
-                <img
-                  class="img-icon-add"
-                  src="https://i.ibb.co/k4PrbMd/image.png"
-                  alt=""
-                />
-                <span class="ms-3"> </span>
-
-                ที่จอดรถ Garage
+                    <img
+                      class="img-icon-add"
+                      src="https://i.ibb.co/k4PrbMd/image.png"
+                      alt=""
+                    />
+                    <span class="ms-3"> </span>
+                  </div>
+                  <div class="flex-2">ที่จอดรถ Garage</div>
+                </div>
               </div>
               <input
                 type="checkbox"
@@ -283,11 +308,18 @@
                   <hr />
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tYc2LW0/Asset-6.png"
-                        alt=""
-                      />ถังบำบัดน้ำเสีย Septic Tank
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break col-3"
+                            src="https://i.ibb.co/tYc2LW0/Asset-6.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ถังบำบัดน้ำเสีย <br />Septic Tank
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -318,9 +350,17 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img class="img-list"
-                      src="https://i.ibb.co/4JVyx4d/Artboard-5-copy-4x.png""
-                      alt="">บ่อพักดักกลิ่น Order trap
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img class="img-list"
+                          src="https://i.ibb.co/4JVyx4d/Artboard-5-copy-4x.png""
+                          alt="">
+                        </div>
+                        <div class="flex-2">
+                          บ่อพักดักกลิ่น<br />
+                          Order trap
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -351,11 +391,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/PZKqVzd/Artboard-5-4x.png"
-                        alt=""
-                      />ถังดักไขมัน Grase Trap
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/PZKqVzd/Artboard-5-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ถังดักไขมัน<br />
+                          Grase Trap
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -386,11 +434,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/VwP3KDK/Artboard-5-copy-2-4x.png"
-                        alt=""
-                      />แทงค์น้ำ Water Tank
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/VwP3KDK/Artboard-5-copy-2-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          แทงค์น้ำ<br />
+                          Water Tank
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -421,11 +477,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/cFqxJNK/Artboard-5-copy-3-4x.png"
-                        alt=""
-                      />ปั้มน้ำอัตโนมัติ Water Pump
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/cFqxJNK/Artboard-5-copy-3-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ปั้มน้ำอัตโนมัติ<br />
+                          Water Pump
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -456,11 +520,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/rsjVvKg/Asset-1.png"
-                        alt=""
-                      />ระบบท่อปลวก Pipe Termites
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/rsjVvKg/Asset-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบท่อปลวก<br />
+                          Pipe Termites
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -589,11 +661,18 @@
                   </div> -->
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/0CMwsBr/Asset-3.png"
-                        alt=""
-                      />หลังคาโซลาร์เซลล์ Solar Roof
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/0CMwsBr/Asset-3.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          หลังคาโซลาร์เซลล์ <br />Solar Roof
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -624,11 +703,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/YBtPSDR/Artboard-9-copy-4x.png"
-                        alt=""
-                      />ฉนวนกันความร้อน Insulation
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/YBtPSDR/Artboard-9-copy-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ฉนวนกันความร้อน<br />
+                          Insulation
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -659,12 +746,23 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/Wvrwm6J/Artboard-9-copy-10-4x.png"
-                        alt=""
-                      />
-                      ระบบระบายความร้อนใต้หลังคา Roof Tile Ventilator
+                      <div class="display-flex">
+                        <div class="flex-1"></div>
+                        <div class="flex-2"></div>
+                      </div>
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/Wvrwm6J/Artboard-9-copy-10-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบระบายความร้อนใต้หลังคา <br />
+                          Roof Tile Ventilator
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -723,11 +821,19 @@
                   <hr />
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/BncjX9F/Artboard-9-copy-4-4x.png"
-                        alt=""
-                      />มิเตอร์ไฟฟ้า Electric Meter
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/BncjX9F/Artboard-9-copy-4-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          มิเตอร์ไฟฟ้า<br />
+                          Electric Meter
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -758,11 +864,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/CQgSBYQ/Asset-1.png"
-                        alt=""
-                      />เมนเบรกเกอร์ไฟ Main Breaker
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/CQgSBYQ/Asset-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เมนเบรกเกอร์ไฟ<br />
+                          Main Breaker
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -793,11 +907,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/ZdPk79s/Artboard-9-copy-8-4x.png"
-                        alt=""
-                      />ระบบป้องกันไฟดูด Residual Current Device
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/ZdPk79s/Artboard-9-copy-8-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบป้องกันไฟดูด<br />
+                          Residual Current Device
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -828,11 +950,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list"
-                        src="https://i.ibb.co/17rPSsh/Artboard-9-copy-6-4x.png"
-                        alt=""
-                      />เครื่องชาร์ทรถยนต์ไฟฟ้า EV Charger
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/17rPSsh/Artboard-9-copy-6-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เครื่องชาร์ทรถยนต์ไฟฟ้า<br />
+                          EV Charger
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -863,12 +993,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      ไฟฉุกเฉิน Emergency Light
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ไฟฉุกเฉิน<br />
+                          Emergency Light
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -899,12 +1036,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      มอเตอร์ประตูรั้ว Door Automatic
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          มอเตอร์ประตูรั้ว<br />
+                          Door Automatic
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -935,12 +1079,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      เครื่องตรวจจับควัน Smoke Detector
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เครื่องตรวจจับควัน<br />
+                          Smoke Detector
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -971,12 +1122,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      เบรกเกอร์กันดูดชั้น 1 RCDs Breaker for 1st floor
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เบรกเกอร์กันดูดชั้น 1 <br />
+                          RCDs Breaker for 1st floor
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1007,12 +1165,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      เบรกเกอร์กันดูดชั้น 2 RCDs Breaker for second floor
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เบรกเกอร์กันดูดชั้น 2 <br />
+                          RCDs Breaker for second floor
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1043,12 +1208,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      เครื่องตรวจจับความร้อน Heat Detector
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เครื่องตรวจจับความร้อน <br />
+                          Heat Detector
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1079,12 +1251,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      ระบบสมาร์ทโฮม Smart Home
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบสมาร์ทโฮม <br />
+                          Smart Home
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1115,12 +1294,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      ระบบรักษาความปลอดภัย Security Home System
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบรักษาความปลอดภัย <br />
+                          Security Home System
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1151,12 +1337,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      กล้องวงจรปิด CCTV Camera
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          กล้องวงจรปิด <br />
+                          CCTV Camera
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1187,12 +1380,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      กริ่งบ้าน Door bell
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          กริ่งบ้าน <br />
+                          Door bell
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1223,12 +1423,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      ปลั๊กไฟ-สวิตซ์ plug-switch
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ปลั๊กไฟ-สวิตซ์ <br />
+                          plug-switch
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
@@ -1259,12 +1466,19 @@
                   </div>
                   <div class="row row-cols-4 mb-1 row-input">
                     <div class="col-6 item-name">
-                      <img
-                        class="img-list-break"
-                        src="https://i.ibb.co/tBsfX1c/Asset-5.png"
-                        alt=""
-                      />
-                      ห้องแม่บ้าน Maid Room
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/tBsfX1c/Asset-5.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ห้องแม่บ้าน <br />
+                          Maid Room
+                        </div>
+                      </div>
                     </div>
                     <div class="col-1 center-checkbox-spec">
                       <input
